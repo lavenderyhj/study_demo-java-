@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="aop_java (1)" />
+        <module name="config-client" />
+        <module name="config-server" />
+        <module name="eurekaclient" />
+        <module name="eurekademo" />
+        <module name="eurekaservice" />
+        <module name="jettydemo" />
+        <module name="quartzdemo" />
+        <module name="serice-feign" />
+        <module name="service-lucy" />
+        <module name="service-ribbon" />
+        <module name="service-turbine" />
+        <module name="service-zuul" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="aop_java" target="1.8" />
+      <module name="aop_java (1)" target="1.8" />
+      <module name="config-client" target="1.8" />
+      <module name="config-server" target="1.8" />
+      <module name="eurekaclient" target="1.8" />
+      <module name="eurekademo" target="1.8" />
+      <module name="eurekaservice" target="1.8" />
+      <module name="jettydemo" target="1.8" />
+      <module name="open-falcon-plugins" target="1.5" />
+      <module name="quartzdemo" target="1.8" />
+      <module name="serice-feign" target="1.8" />
+      <module name="service-lucy" target="1.8" />
+      <module name="service-ribbon" target="1.8" />
+      <module name="service-turbine" target="1.8" />
+      <module name="service-zuul" target="1.8" />
+      <module name="springclouddemo" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

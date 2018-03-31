@@ -7,6 +7,7 @@
     <groupId>com.example</groupId>
     <artifactId>springcloud-demo</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
     <modules>
         <module>service-lucy</module>
         <module>config-client</module>
