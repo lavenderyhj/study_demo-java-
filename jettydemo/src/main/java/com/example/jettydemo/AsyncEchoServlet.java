@@ -22,7 +22,7 @@ public class AsyncEchoServlet extends HttpServlet {
 		resp.getOutputStream().setWriteListener(echoer);
 	}
 
-	private class Echoer implements ReadListener, WriteListener {
+	private static class Echoer implements ReadListener, WriteListener {
 
 		private final byte[] buffer = new byte[4096];
 

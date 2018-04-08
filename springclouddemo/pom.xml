@@ -18,6 +18,7 @@
         <module>service-ribbon</module>
         <module>service-turbine</module>
         <module>service-zuul</module>
+        <module>../springsecuritydemo</module>
     </modules>
 
     
