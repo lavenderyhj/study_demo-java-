@@ -44,13 +44,12 @@ public class AuthApplication {
         private MongoUserDetailsService userDetailsService;
 
 
-
         @Override
         protected void configure(HttpSecurity http) throws Exception {
             // @formatter:off
             http
                     .authorizeRequests()
-                    .antMatchers("/uaa/**","/uaa/users","/users*","/users/*","/users/").permitAll()
+                    .antMatchers("/uaa/**", "/uaa/users", "/users*", "/users/*", "/users/").permitAll()
                     .anyRequest().authenticated()
                     .and()
                     .csrf().disable();
@@ -70,8 +69,8 @@ public class AuthApplication {
         }
 
         @Override
-        public void configure(WebSecurity web) throws Exception {
-            web.ignoring().antMatchers("/uaa/users","/users","/uaa/users*","/users*");
+        public void configure(WebSecurity web) {
+            web.ignoring().antMatchers("/uaa/users", "/users", "/uaa/users*", "/users*");
         }
     }
 
@@ -79,7 +78,7 @@ public class AuthApplication {
     @EnableAuthorizationServer
     protected static class OAuth2AuthorizationConfig extends AuthorizationServerConfigurerAdapter {
 
-        private TokenStore tokenStore = new InMemoryTokenStore();
+        private final TokenStore tokenStore = new InMemoryTokenStore();
 
         @Autowired
         @Qualifier("authenticationManagerBean")
@@ -110,7 +109,7 @@ public class AuthApplication {
         }
 
         @Override
-        public void configure(AuthorizationServerEndpointsConfigurer endpoints) throws Exception {
+        public void configure(AuthorizationServerEndpointsConfigurer endpoints) {
             endpoints
                     .tokenStore(tokenStore)
                     .authenticationManager(authenticationManager)
@@ -118,7 +117,7 @@ public class AuthApplication {
         }
 
         @Override
-        public void configure(AuthorizationServerSecurityConfigurer oauthServer) throws Exception {
+        public void configure(AuthorizationServerSecurityConfigurer oauthServer) {
             oauthServer
                     .tokenKeyAccess("permitAll()")
                     .checkTokenAccess("isAuthenticated()");

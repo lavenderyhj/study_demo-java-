@@ -11,20 +11,20 @@ import java.lang.reflect.Proxy;
  */
 public class PersonTest {
 
-	@Test
-	public void test(){
-		PersonDao pDao = new PersonDaoImpl();
-		PersonDao proxy = (PersonDao) Proxy.newProxyInstance(pDao.getClass().getClassLoader(),
-				pDao.getClass().getInterfaces(), new InvocationHandler() {
-					@Override
-					public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-						System.out.println("before");
+    @Test
+    public void test() {
+        PersonDao pDao = new PersonDaoImpl();
+        PersonDao proxy = (PersonDao) Proxy.newProxyInstance(pDao.getClass().getClassLoader(),
+                pDao.getClass().getInterfaces(), new InvocationHandler() {
+                    @Override
+                    public Object invoke(Object proxy, Method method, Object[] args) {
+                        System.out.println("before");
 
-						System.out.println("after");
-						return "yes yoyo";
+                        System.out.println("after");
+                        return "yes yoyo";
 
-					}
-				});
-		System.out.print( proxy.say());
-	}
+                    }
+                });
+        System.out.print(proxy.say());
+    }
 }

@@ -9,7 +9,7 @@ import java.io.IOException;
  * Created by yuhuijuan on 2018/2/22
  */
 public class HelloServlet extends HttpServlet {
-	final String greeting;
+	private final String greeting;
 
 	public HelloServlet(){
 		this("Hello");

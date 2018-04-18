@@ -1,0 +1,7 @@
+public ActionForward edit${className}(ActionMapping mapping, ActionForm form,
+HttpServletRequest request, HttpServletResponse response)
+throws Exception {
+
+logger.debug("--- edit${className} start ---");
+checkToken(request);
+${className}Form ${className.toLowerCase()}Form = (${className}Form)form;
